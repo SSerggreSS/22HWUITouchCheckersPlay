@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CheckersBoard.png" highlightedImage="CheckersBoard.png" translatesAutoresizingMaskIntoConstraints="NO" id="bTd-V0-r02">
+                                <rect key="frame" x="60" y="230" width="905" height="907"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KlS-7c-JCj" customClass="BlackCell">
+                                <rect key="frame" x="200" y="295" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hMD-x7-Ddi" customClass="BlackCell">
+                                <rect key="frame" x="356" y="296" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hz3-zm-VvJ" customClass="BlackCell">
+                                <rect key="frame" x="512" y="295" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q4R-R5-uGr" customClass="BlackCell">
+                                <rect key="frame" x="668" y="295" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aG0-Dg-U5E" customClass="BlackCell">
+                                <rect key="frame" x="823" y="293" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PmY-Rr-u4a" customClass="BlackCell">
+                                <rect key="frame" x="591" y="373" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7fi-X5-gRq" customClass="BlackCell">
+                                <rect key="frame" x="435" y="373" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vns-pp-bQb" customClass="BlackCell">
+                                <rect key="frame" x="279" y="373" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c8f-7y-u8n" customClass="BlackCell">
+                                <rect key="frame" x="123" y="373" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5vo-0m-5yu" customClass="BlackCell">
+                                <rect key="frame" x="747" y="370" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cig-3x-zY1" customClass="BlackCell">
+                                <rect key="frame" x="201" y="450" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WN8-G2-qk2" customClass="BlackCell">
+                                <rect key="frame" x="357" y="451" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6vI-Jn-bpV" customClass="BlackCell">
+                                <rect key="frame" x="513" y="450" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dxw-ZU-Irs" customClass="BlackCell">
+                                <rect key="frame" x="669" y="450" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="veh-Av-xw3" customClass="BlackCell">
+                                <rect key="frame" x="824" y="448" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gkF-ug-ckB" customClass="BlackCell">
+                                <rect key="frame" x="592" y="528" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KQL-eP-mnJ" customClass="BlackCell">
+                                <rect key="frame" x="436" y="528" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GMb-FU-PuY" customClass="BlackCell">
+                                <rect key="frame" x="280" y="528" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v8I-6U-Pxh" customClass="BlackCell">
+                                <rect key="frame" x="124" y="528" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HMi-6b-hSV" customClass="BlackCell">
+                                <rect key="frame" x="748" y="525" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="coq-Oy-i8N" customClass="BlackCell">
+                                <rect key="frame" x="201" y="605" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZcE-tf-uck" customClass="BlackCell">
+                                <rect key="frame" x="357" y="606" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zir-Sq-Q5R" customClass="BlackCell">
+                                <rect key="frame" x="513" y="605" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="32h-EI-2Ej" customClass="BlackCell">
+                                <rect key="frame" x="669" y="605" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ufm-SG-0K8" customClass="BlackCell">
+                                <rect key="frame" x="824" y="603" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="INZ-5F-Vyw" customClass="BlackCell">
+                                <rect key="frame" x="592" y="683" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5dK-he-6A1" customClass="BlackCell">
+                                <rect key="frame" x="436" y="683" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YaL-3h-ZFw" customClass="BlackCell">
+                                <rect key="frame" x="280" y="683" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6o6-sw-lcP" customClass="BlackCell">
+                                <rect key="frame" x="124" y="683" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N9Y-Tl-Xxo" customClass="BlackCell">
+                                <rect key="frame" x="748" y="680" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Krb-gM-sLN" customClass="BlackCell">
+                                <rect key="frame" x="202" y="760" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c63-mO-33y" customClass="BlackCell">
+                                <rect key="frame" x="358" y="761" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WpE-ID-EqK" customClass="BlackCell">
+                                <rect key="frame" x="514" y="760" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aXQ-gh-xmS" customClass="BlackCell">
+                                <rect key="frame" x="670" y="760" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2L-CP-sSV" customClass="BlackCell">
+                                <rect key="frame" x="825" y="758" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1cR-Kq-va0" customClass="BlackCell">
+                                <rect key="frame" x="593" y="838" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ech-NQ-dxe" customClass="BlackCell">
+                                <rect key="frame" x="437" y="838" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHz-SV-6ZA" customClass="BlackCell">
+                                <rect key="frame" x="281" y="838" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uib-2r-Ifd" customClass="BlackCell">
+                                <rect key="frame" x="125" y="838" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sEp-h2-YCo" customClass="BlackCell">
+                                <rect key="frame" x="749" y="835" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sxt-iV-H3E" customClass="BlackCell">
+                                <rect key="frame" x="204" y="916" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wz1-Eu-yo2" customClass="BlackCell">
+                                <rect key="frame" x="360" y="917" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hg8-hk-b1l" customClass="BlackCell">
+                                <rect key="frame" x="516" y="916" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J81-3O-bJC" customClass="BlackCell">
+                                <rect key="frame" x="672" y="916" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rDP-jl-h6F" customClass="BlackCell">
+                                <rect key="frame" x="827" y="914" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vpN-Ka-H6d" customClass="BlackCell">
+                                <rect key="frame" x="595" y="994" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q10-yk-MvS" customClass="BlackCell">
+                                <rect key="frame" x="439" y="994" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ptW-86-p8f" customClass="BlackCell">
+                                <rect key="frame" x="283" y="994" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DD2-1K-fxd" customClass="BlackCell">
+                                <rect key="frame" x="127" y="994" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EYD-3p-2XP" customClass="BlackCell">
+                                <rect key="frame" x="751" y="991" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9dV-hV-lMS" customClass="Checker">
+                                <rect key="frame" x="295" y="1008" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CheckerBlack.png" translatesAutoresizingMaskIntoConstraints="NO" id="o5t-p0-qrO">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w35-0j-t4l" customClass="Checker">
+                                <rect key="frame" x="454" y="1008" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CheckerBlack.png" translatesAutoresizingMaskIntoConstraints="NO" id="9hu-r3-NmT">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lHA-4g-D7W" customClass="Checker">
+                                <rect key="frame" x="607" y="1008" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CheckerBlack.png" translatesAutoresizingMaskIntoConstraints="NO" id="8tx-QW-kJD">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h5O-Vm-dWF" customClass="Checker">
+                                <rect key="frame" x="766" y="1008" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CheckerBlack.png" translatesAutoresizingMaskIntoConstraints="NO" id="P0e-Eb-2lh">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x4g-3I-krt" customClass="Checker">
+                                <rect key="frame" x="218" y="930" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CheckerBlack.png" translatesAutoresizingMaskIntoConstraints="NO" id="vfM-lb-0M4">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AmF-vV-cmG" customClass="Checker">
+                                <rect key="frame" x="530" y="930" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CheckerBlack.png" translatesAutoresizingMaskIntoConstraints="NO" id="PUQ-Od-cRa">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xTT-ws-yEz" customClass="Checker">
+                                <rect key="frame" x="840" y="930" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CheckerBlack.png" translatesAutoresizingMaskIntoConstraints="NO" id="WA0-DX-yns">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uGZ-NI-fQE" customClass="Checker">
+                                <rect key="frame" x="685" y="928" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CheckerBlack.png" translatesAutoresizingMaskIntoConstraints="NO" id="crn-7Z-Dl4">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="br1-7W-4sN" customClass="Checker">
+                                <rect key="frame" x="373" y="931" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CheckerBlack.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZEq-Rh-BkF">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8D4-vA-UdE" customClass="Checker">
+                                <rect key="frame" x="140" y="1008" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CheckerBlack.png" translatesAutoresizingMaskIntoConstraints="NO" id="UnU-cm-eB7">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view tag="4" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UVb-jh-ILL" customClass="Checker">
+                                <rect key="frame" x="369" y="307" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CheckerWhite.png" translatesAutoresizingMaskIntoConstraints="NO" id="BPz-kh-0FH">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view tag="4" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bF9-8z-Hmi" customClass="Checker">
+                                <rect key="frame" x="525" y="307" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CheckerWhite.png" translatesAutoresizingMaskIntoConstraints="NO" id="iNy-9w-bRk">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view tag="4" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QA5-iu-pT0" customClass="Checker">
+                                <rect key="frame" x="681" y="307" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CheckerWhite.png" translatesAutoresizingMaskIntoConstraints="NO" id="ONC-v4-nXS">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view tag="4" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aei-2q-xGK" customClass="Checker">
+                                <rect key="frame" x="837" y="307" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CheckerWhite.png" translatesAutoresizingMaskIntoConstraints="NO" id="kfA-XE-B7d">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view tag="4" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ezN-cU-3zm" customClass="Checker">
+                                <rect key="frame" x="213" y="310" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CheckerWhite.png" translatesAutoresizingMaskIntoConstraints="NO" id="v3B-R8-OZC">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view tag="4" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gCb-u8-k1t" customClass="Checker">
+                                <rect key="frame" x="446" y="386" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CheckerWhite.png" translatesAutoresizingMaskIntoConstraints="NO" id="kqb-ez-3Rf">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view tag="4" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ipr-lv-Krv" customClass="Checker">
+                                <rect key="frame" x="602" y="386" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CheckerWhite.png" translatesAutoresizingMaskIntoConstraints="NO" id="YG8-3w-Bi4">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view tag="4" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aP6-Ma-3O2" customClass="Checker">
+                                <rect key="frame" x="758" y="386" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CheckerWhite.png" translatesAutoresizingMaskIntoConstraints="NO" id="6pK-lh-eRg">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view tag="4" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uD6-lF-GFX" customClass="Checker">
+                                <rect key="frame" x="290" y="389" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CheckerWhite.png" translatesAutoresizingMaskIntoConstraints="NO" id="toM-sA-Wvc">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <view tag="4" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9u0-Da-cTn" customClass="Checker">
+                                <rect key="frame" x="134" y="389" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CheckerWhite.png" translatesAutoresizingMaskIntoConstraints="NO" id="bYO-rM-XMW">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="checkersBoard" destination="bTd-V0-r02" id="Wk0-ZV-Xhm"/>
+                        <outletCollection property="blackCells" destination="KlS-7c-JCj" id="uE7-h8-SW0"/>
+                        <outletCollection property="blackCells" destination="hMD-x7-Ddi" id="DKS-A1-wm9"/>
+                        <outletCollection property="blackCells" destination="hz3-zm-VvJ" id="o5T-7g-sZX"/>
+                        <outletCollection property="blackCells" destination="q4R-R5-uGr" id="Vdg-Ml-vZW"/>
+                        <outletCollection property="blackCells" destination="aG0-Dg-U5E" id="fgV-Mk-oL4"/>
+                        <outletCollection property="blackCells" destination="PmY-Rr-u4a" id="P5Y-4n-F5O"/>
+                        <outletCollection property="blackCells" destination="7fi-X5-gRq" id="UhD-cC-msN"/>
+                        <outletCollection property="blackCells" destination="vns-pp-bQb" id="C6N-hY-XMg"/>
+                        <outletCollection property="blackCells" destination="c8f-7y-u8n" id="Pqs-dl-N5k"/>
+                        <outletCollection property="blackCells" destination="5vo-0m-5yu" id="Qhg-U6-GFj"/>
+                        <outletCollection property="blackCells" destination="cig-3x-zY1" id="bzo-QL-nDo"/>
+                        <outletCollection property="blackCells" destination="WN8-G2-qk2" id="Mcy-zr-2LA"/>
+                        <outletCollection property="blackCells" destination="6vI-Jn-bpV" id="BMK-lo-4eX"/>
+                        <outletCollection property="blackCells" destination="dxw-ZU-Irs" id="1xj-e3-fjO"/>
+                        <outletCollection property="blackCells" destination="veh-Av-xw3" id="yDM-96-HQk"/>
+                        <outletCollection property="blackCells" destination="gkF-ug-ckB" id="zfc-NN-EgN"/>
+                        <outletCollection property="blackCells" destination="KQL-eP-mnJ" id="vHb-Es-Pr0"/>
+                        <outletCollection property="blackCells" destination="GMb-FU-PuY" id="ws5-xO-QBw"/>
+                        <outletCollection property="blackCells" destination="v8I-6U-Pxh" id="O8o-Kj-2ir"/>
+                        <outletCollection property="blackCells" destination="HMi-6b-hSV" id="ign-17-vhB"/>
+                        <outletCollection property="blackCells" destination="coq-Oy-i8N" id="6pw-8x-H2t"/>
+                        <outletCollection property="blackCells" destination="ZcE-tf-uck" id="9xY-MF-Omd"/>
+                        <outletCollection property="blackCells" destination="zir-Sq-Q5R" id="wIJ-cl-ePi"/>
+                        <outletCollection property="blackCells" destination="32h-EI-2Ej" id="0nI-rC-Yho"/>
+                        <outletCollection property="blackCells" destination="ufm-SG-0K8" id="SJp-RO-4r4"/>
+                        <outletCollection property="blackCells" destination="INZ-5F-Vyw" id="2dy-mC-wEv"/>
+                        <outletCollection property="blackCells" destination="5dK-he-6A1" id="dWc-B3-Per"/>
+                        <outletCollection property="blackCells" destination="YaL-3h-ZFw" id="TYs-ro-NXD"/>
+                        <outletCollection property="blackCells" destination="6o6-sw-lcP" id="U8O-XE-Fvs"/>
+                        <outletCollection property="blackCells" destination="N9Y-Tl-Xxo" id="LW6-mR-B15"/>
+                        <outletCollection property="blackCells" destination="Krb-gM-sLN" id="2Bh-6W-yLv"/>
+                        <outletCollection property="blackCells" destination="c63-mO-33y" id="g82-2r-qzR"/>
+                        <outletCollection property="blackCells" destination="WpE-ID-EqK" id="pGn-Ad-yem"/>
+                        <outletCollection property="blackCells" destination="aXQ-gh-xmS" id="FJq-A5-Za4"/>
+                        <outletCollection property="blackCells" destination="c2L-CP-sSV" id="jcQ-uF-vsr"/>
+                        <outletCollection property="blackCells" destination="1cR-Kq-va0" id="KX1-t8-Mz9"/>
+                        <outletCollection property="blackCells" destination="Ech-NQ-dxe" id="Pa4-If-CZ2"/>
+                        <outletCollection property="blackCells" destination="gHz-SV-6ZA" id="8J4-t6-UVw"/>
+                        <outletCollection property="blackCells" destination="Uib-2r-Ifd" id="99M-W6-22s"/>
+                        <outletCollection property="blackCells" destination="sEp-h2-YCo" id="IxJ-0X-84F"/>
+                        <outletCollection property="blackCells" destination="sxt-iV-H3E" id="dME-gw-q4g"/>
+                        <outletCollection property="blackCells" destination="Wz1-Eu-yo2" id="sHH-He-UjY"/>
+                        <outletCollection property="blackCells" destination="hg8-hk-b1l" id="egy-1V-xiX"/>
+                        <outletCollection property="blackCells" destination="J81-3O-bJC" id="IG9-iC-pTD"/>
+                        <outletCollection property="blackCells" destination="rDP-jl-h6F" id="DxE-St-dFd"/>
+                        <outletCollection property="blackCells" destination="vpN-Ka-H6d" id="BDS-AK-3sg"/>
+                        <outletCollection property="blackCells" destination="q10-yk-MvS" id="582-Td-LEh"/>
+                        <outletCollection property="blackCells" destination="ptW-86-p8f" id="Vla-di-czC"/>
+                        <outletCollection property="blackCells" destination="DD2-1K-fxd" id="qK2-2Z-7WG"/>
+                        <outletCollection property="blackCells" destination="EYD-3p-2XP" id="giL-m0-Idp"/>
+                        <outletCollection property="checkers" destination="9dV-hV-lMS" id="DkF-c2-tyt"/>
+                        <outletCollection property="checkers" destination="x4g-3I-krt" id="tEN-BR-WV7"/>
+                        <outletCollection property="checkers" destination="8D4-vA-UdE" id="KpV-91-tfw"/>
+                        <outletCollection property="checkers" destination="br1-7W-4sN" id="2XW-Te-maH"/>
+                        <outletCollection property="checkers" destination="w35-0j-t4l" id="UlY-Ik-eUm"/>
+                        <outletCollection property="checkers" destination="AmF-vV-cmG" id="Xtf-ZG-zkD"/>
+                        <outletCollection property="checkers" destination="lHA-4g-D7W" id="qSk-33-BHz"/>
+                        <outletCollection property="checkers" destination="uGZ-NI-fQE" id="X8N-cx-eFX"/>
+                        <outletCollection property="checkers" destination="h5O-Vm-dWF" id="Qyi-AT-sZZ"/>
+                        <outletCollection property="checkers" destination="xTT-ws-yEz" id="LkP-Iu-1QE"/>
+                        <outletCollection property="checkers" destination="9u0-Da-cTn" id="urZ-1O-jxb"/>
+                        <outletCollection property="checkers" destination="ezN-cU-3zm" id="PJK-am-wpX"/>
+                        <outletCollection property="checkers" destination="uD6-lF-GFX" id="aDf-jT-eDS"/>
+                        <outletCollection property="checkers" destination="UVb-jh-ILL" id="MWQ-Xi-oJD"/>
+                        <outletCollection property="checkers" destination="gCb-u8-k1t" id="3mJ-d2-I2A"/>
+                        <outletCollection property="checkers" destination="bF9-8z-Hmi" id="IV8-eb-Zmx"/>
+                        <outletCollection property="checkers" destination="ipr-lv-Krv" id="VB6-90-LND"/>
+                        <outletCollection property="checkers" destination="QA5-iu-pT0" id="7Lu-dH-h8T"/>
+                        <outletCollection property="checkers" destination="aP6-Ma-3O2" id="PWT-9P-kF7"/>
+                        <outletCollection property="checkers" destination="Aei-2q-xGK" id="lLb-Uv-bul"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-456" y="82"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CheckerBlack.png" width="81" height="81"/>
+        <image name="CheckerWhite.png" width="80" height="79"/>
+        <image name="CheckersBoard.png" width="1100" height="1098"/>
+    </resources>
+</document>
