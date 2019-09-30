@@ -8,15 +8,17 @@
 
 #import "BlackCell.h"
 
+
 @implementation BlackCell
 
 
 
 - (void)drawRect:(CGRect)rect {
    
-    rect.size.height += 10.0f;
-    rect.size.width += 10.0f;
-    
+//    CGRect rectPath = CGRectMake(-20.0f, -20.0, rect.size.width + 30.0f, rect.size.height + 30.0f);
+//    UIBezierPath *path = [UIBezierPath bezierPathWithRect:rectPath];
+//    
+//    [path fill];
     
 }
 

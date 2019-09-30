@@ -25,7 +25,7 @@
 
 @interface ViewController ()
 
-@property (weak, nonatomic, readwrite) UIView *draggingView;
+@property (weak, nonatomic, readwrite) UIView *checkerForDragging;
 @property (assign, nonatomic) CGPoint touchOffSet;
 
 @property (weak, nonatomic) IBOutlet UIImageView *checkersBoard;
@@ -38,9 +38,19 @@
 
 @property (assign, nonatomic) Boolean checkerBreaksRule;
 
+@property (weak, nonatomic) UIAlertController *alertWorning;
+
 @end
 
 @implementation ViewController
+
+- (instancetype) init {
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -50,10 +60,8 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    
-    
 }
-
+//when touched to screen
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event {
     
     [self printPointCoordinateTouches:touches onView:self.view methodName:@"touchesBegan"];
@@ -61,65 +69,80 @@
     CGPoint pointOnMainView = [self getPointTouchFromTouches:touches inView:self.view];
     UIView *view = [self.view hitTest:pointOnMainView withEvent:event];
     
+    //view not should wos main view and not should wos view for black cell
     if (![view isEqual:self.view] && view.tag != 1) {
         
-        self.draggingView = view;
+        self.checkerForDragging = view;
         self.startPointDraggingChecker = view.center;
         
-        [self.view bringSubviewToFront:self.draggingView];
+        [self.view bringSubviewToFront:self.checkerForDragging];
         
-        CGPoint touchPoint = [self getPointTouchFromTouches:touches inView:self.draggingView];
+        CGPoint touchPoint = [self getPointTouchFromTouches:touches inView:self.checkerForDragging];
         
-        self.touchOffSet = CGPointMake(CGRectGetMidX(self.draggingView.bounds) - touchPoint.x,
-                                       CGRectGetMidY(self.draggingView.bounds) - touchPoint.y);
+        self.touchOffSet = CGPointMake(CGRectGetMidX(self.checkerForDragging.bounds) - touchPoint.x,
+                                       CGRectGetMidY(self.checkerForDragging.bounds) - touchPoint.y);
         
         [UIView animateWithDuration:0.3 animations:^{
-            self.draggingView.transform = CGAffineTransformMakeScale(1.4, 1.4);
-            self.draggingView.alpha = 0.7;
+            self.checkerForDragging.transform = CGAffineTransformMakeScale(1.4, 1.4);
         }];
         
-        
     } else {
-        self.draggingView = nil;
+        self.checkerForDragging = nil;
     }
-    
 }
-
+//touch moving
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event {
         
         [self printPointCoordinateTouches:touches onView:self.view methodName:@"touchesMoved"];
     
-    if (self.draggingView) {
+    if (self.checkerForDragging) {
         
         CGPoint pointTouch = [self getPointTouchFromTouches:touches inView:self.view];
         
         CGPoint correction = CGPointMake(self.touchOffSet.x + pointTouch.x,
                                          self.touchOffSet.y + pointTouch.y);
         
-        self.draggingView.center = correction;
+        self.checkerForDragging.center = correction;
     }
     
-        
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event {
             
+    BOOL isIntesection = NO;
+    UIView *intersectionView;
+    
     [self printPointCoordinateTouches:touches onView:self.view methodName:@"touchesEnded"];
     
-    [self viewInDefaultState:self.draggingView withAnimateDuration:0.3];
+    [self viewInDefaultState:self.checkerForDragging withAnimateDuration:0.3];
     
-    if (!CGRectContainsRect(CGRectInset(self.checkersBoard.frame, 30.0f, 30.0f), self.draggingView.frame)) {
+    if (!CGRectContainsRect(CGRectInset(self.checkersBoard.frame, 30.0f, 30.0f), self.checkerForDragging.frame)) {
 
-        self.draggingView.center = self.startPointDraggingChecker;
+        [UIView animateWithDuration:0.1 animations:^{
+            self.checkerForDragging.center = self.startPointDraggingChecker;
+        }];
 
+        self.alertWorning = [UIAlertController alertControllerWithTitle:@"⚠️ATTENTION⚠️"
+                                                                       message:@"You cannot go outside the board!❌"
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *alertAction1 = [UIAlertAction actionWithTitle:@"Ok"
+                                                               style:UIAlertActionStyleDefault
+                                                             handler:nil];
+
+        [self.alertWorning addAction:alertAction1];
+        [self presentViewController:self.alertWorning animated:YES completion:nil];
+    
+        NSLog(@"alert");
+        
     }
     
     for (Checker* checker in self.checkers) {
 
-        if ((CGRectIntersectsRect(self.draggingView.frame, checker.frame)) &&
-            ![self.draggingView isEqual:checker]) {
-            NSLog(@"for (Checker* checker in self.checkers) self.checkerBreaksRule = YES;");
-            self.draggingView.center = self.startPointDraggingChecker;
+        if ((CGRectIntersectsRect(self.checkerForDragging.frame, checker.frame)) &&
+            ![self.checkerForDragging isEqual:checker]) {
+            
+            self.checkerForDragging.center = self.startPointDraggingChecker;
 
         }
 
@@ -127,26 +150,59 @@
     
     for (BlackCell *blackCell in self.blackCells) {
         
-        
-    if (CGRectIntersectsRect(self.draggingView.frame, blackCell.frame)) {
-            NSLog(@"Work firs block");
-        self.draggingView.center = blackCell.center;
-        break;
-    }
-        
+        if (CGRectIntersectsRect(blackCell.frame, self.checkerForDragging.frame)) {
+            intersectionView = blackCell;
+        }
+    
 }
     
-    self.draggingView = nil;
+    for (BlackCell *blackCell in self.blackCells) {
+        if ([blackCell isEqual:intersectionView]) {
+            
+            [UIView animateWithDuration:0.3 animations:^{
+                self.checkerForDragging.center = blackCell.center;
+            }];
+            isIntesection = YES;
+            break;
+        } else if (!CGRectIntersectsRect(self.checkerForDragging.frame, blackCell.frame) &&
+                   ![blackCell isEqual:intersectionView]) {
+            
+            NSLog(@"!!!");
+            [UIView animateWithDuration:0.3 animations:^{
+                self.checkerForDragging.center = self.startPointDraggingChecker;
+            }];
+        }
+    }
+    
+    if (!isIntesection) {
+        NSLog(@"%@", isIntesection ? @"YES" : @"NO");
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"⚠️ATTENTION⚠️"
+                                                                           message:@"Сannot be placed on a white cage!❌"
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+        
+            UIAlertAction *action =    [UIAlertAction actionWithTitle:@"Ok"
+                                                             style:UIAlertActionStyleDefault
+                                                           handler:nil];
+        
+            [alert addAction:action];
+            [self presentViewController: alert animated:YES completion:nil];
+        
+    }
+    
+    self.checkerForDragging = nil;
     
 }
 
 - (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event {
     
+    
     [self printPointCoordinateTouches:touches onView:self.view methodName:@"touchesCancelled"];
     
-    [self viewInDefaultState:self.draggingView withAnimateDuration:0.3];
+    [self viewInDefaultState:self.checkerForDragging withAnimateDuration:0.3];
     
-    self.draggingView = nil;
+    self.checkerForDragging.center = self.startPointDraggingChecker;
+    
+    self.checkerForDragging = nil;
     
 }
 
